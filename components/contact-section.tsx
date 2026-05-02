@@ -22,7 +22,7 @@ export function ContactSection() {
               Book a free strategy call
             </ButtonCta>
             <ButtonGhost external href={waUrl} className="border-gold/40 text-gold hover:text-gold">
-              WhatsApp Viilasa
+              WhatsApp Me
             </ButtonGhost>
           </div>
         </div>
