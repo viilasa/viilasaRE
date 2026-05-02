@@ -1,11 +1,28 @@
 /**
  * Canonical site URL for SEO, OG, JSON-LD, sitemap — must be absolute HTTPS in prod.
+ *
+ * Prefer `NEXT_PUBLIC_SITE_URL` in `.env.local` / Vercel. On **Vercel production** with no env,
+ * this falls back to the live domain https://viilasa.com
  */
 
+export const PRODUCTION_SITE_URL = "https://viilasa.com";
+
 export function getSiteUrl(): string {
-  const raw =
-    process.env.NEXT_PUBLIC_SITE_URL?.trim() || "http://localhost:3000";
-  return raw.replace(/\/$/, "");
+  const fromEnv = process.env.NEXT_PUBLIC_SITE_URL?.trim();
+  if (fromEnv) {
+    return fromEnv.replace(/\/$/, "");
+  }
+
+  if (process.env.VERCEL_ENV === "production") {
+    return PRODUCTION_SITE_URL;
+  }
+
+  if (process.env.VERCEL_URL) {
+    const host = process.env.VERCEL_URL.replace(/^https?:\/\//, "");
+    return `https://${host}`;
+  }
+
+  return "http://localhost:3000";
 }
 
 export function getAbsoluteUrl(path: string): string {
