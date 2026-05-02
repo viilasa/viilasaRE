@@ -1,0 +1,35 @@
+import { SectionLabel } from "@/components/section-label";
+import { SectionShell } from "@/components/section-shell";
+import { FadeIn } from "@/components/fade-in";
+
+const PAIN = [
+  "Your current site looks like a template—buyers bounce before they see the listing.",
+  "Load times and mobile polish don’t match the ticket size of your inventory.",
+  "You’re too busy closing deals to wrestle with Webflow, WordPress, or yet another “theme.”",
+] as const;
+
+export function ResonanceSection() {
+  return (
+    <SectionShell id="familiar">
+      <div className="grid gap-12 md:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] md:items-start md:gap-16">
+        <FadeIn>
+          <SectionLabel>Sound familiar?</SectionLabel>
+          <h2 className="mt-4 font-heading text-[1.75rem] font-medium leading-[1.15] text-ink md:text-[2.5rem]">
+            Your brand is high‑ticket. Your website should be too.
+          </h2>
+        </FadeIn>
+        <ul className="space-y-6">
+          {PAIN.map((line, i) => (
+            <FadeIn key={line} delayMs={i * 100}>
+              <li className="border-l-2 border-gold/40 pl-6">
+                <p className="max-w-[680px] text-[16px] font-light leading-[1.7] text-body">
+                  {line}
+                </p>
+              </li>
+            </FadeIn>
+          ))}
+        </ul>
+      </div>
+    </SectionShell>
+  );
+}
