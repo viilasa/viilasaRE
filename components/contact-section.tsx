@@ -1,4 +1,8 @@
-import { getCalBookingUrl, getWhatsAppUrl } from "@/lib/site";
+import {
+  getCalBookingUrl,
+  getContactEmail,
+  getWhatsAppUrl,
+} from "@/lib/site";
 import { ButtonCta, ButtonGhost } from "@/components/button-cta";
 import { SectionShell } from "@/components/section-shell";
 import { FadeIn } from "@/components/fade-in";
@@ -6,6 +10,7 @@ import { FadeIn } from "@/components/fade-in";
 export function ContactSection() {
   const calUrl = getCalBookingUrl();
   const waUrl = getWhatsAppUrl();
+  const email = getContactEmail();
 
   return (
     <SectionShell id="contact" altBg>
@@ -16,6 +21,14 @@ export function ContactSection() {
           </h2>
           <p className="mx-auto mt-5 max-w-[540px] text-[16px] font-light leading-[1.7] text-body">
             Book a strategy call or message on WhatsApp—the same person answers both.
+          </p>
+          <p className="mt-4">
+            <a
+              href={`mailto:${email}`}
+              className="text-[15px] font-medium text-gold underline-offset-8 transition-colors hover:text-ink hover:underline"
+            >
+              {email}
+            </a>
           </p>
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <ButtonCta external href={calUrl}>

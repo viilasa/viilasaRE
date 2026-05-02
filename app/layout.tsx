@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Cormorant_Garamond, Outfit } from "next/font/google";
 
 import { SiteJsonLd } from "@/components/json-ld";
+import { getContactEmail } from "@/lib/site";
 import { GEO_PRIMARY_CITY, GEO_REGION_CODE, SEO_KEYWORDS, SITE_TAGLINE, getAbsoluteUrl, getSiteUrl } from "@/lib/seo";
 import "./globals.css";
 
@@ -20,6 +21,7 @@ const fontOutfit = Outfit({
 });
 
 const siteUrl = getSiteUrl();
+const contactEmail = getContactEmail();
 
 const publisher = "Viilasa";
 const seoTitleDefault = `${publisher} · Real Estate Website Builder & Luxury Web Design`;
@@ -68,10 +70,7 @@ export const metadata: Metadata = {
     title: seoTitleDefault,
     description: SITE_TAGLINE,
     countryName: "United Arab Emirates",
-    emails:
-      process.env.NEXT_PUBLIC_CONTACT_EMAIL?.trim()
-        ? [process.env.NEXT_PUBLIC_CONTACT_EMAIL.trim()]
-        : undefined,
+    emails: [contactEmail],
     images: [
       {
         url: `${getAbsoluteUrl("/opengraph-image")}`,

@@ -5,6 +5,7 @@ import { SectionShell } from "@/components/section-shell";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { SITE_TAGLINE } from "@/lib/seo";
+import { getContactEmail } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Privacy policy",
@@ -14,6 +15,8 @@ export const metadata: Metadata = {
 };
 
 export default function PrivacyPage() {
+  const email = getContactEmail();
+
   return (
     <>
       <SiteHeader />
@@ -33,8 +36,14 @@ export default function PrivacyPage() {
             <span className="text-muted">{SITE_TAGLINE}</span>
           </p>
           <p className="mt-8 max-w-[680px] text-[16px] font-light leading-[1.7] text-body">
-            Once final, link to Cal.com / WhatsApp privacy pages if you mirror booking flows
-            on those providers.
+            Questions about privacy on this site:{" "}
+            <a
+              href={`mailto:${email}`}
+              className="font-medium text-gold underline-offset-8 hover:text-ink hover:underline"
+            >
+              {email}
+            </a>
+            .
           </p>
           <p className="mt-12">
             <Link

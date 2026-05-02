@@ -1,3 +1,4 @@
+import { getContactEmail } from "@/lib/site";
 import {
   GEO_PRIMARY_CITY,
   SITE_TAGLINE,
@@ -17,6 +18,7 @@ function JsonLdScript({ schema }: { schema: Record<string, unknown> }) {
 
 export function SiteJsonLd() {
   const siteUrl = getSiteUrl();
+  const email = getContactEmail();
 
   const organization = {
     "@context": "https://schema.org",
@@ -47,6 +49,13 @@ export function SiteJsonLd() {
           "Brokerage lead generation websites",
           "Next.js agency websites",
         ],
+        email,
+        contactPoint: {
+          "@type": "ContactPoint",
+          email,
+          contactType: "sales",
+          url: `${siteUrl}/#contact`,
+        },
       },
       {
         "@type": "WebSite",
