@@ -6,7 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "lighthouse:seo": "node ./scripts/run-lighthouse.mjs seo",
+    "lighthouse:seo:local": "node ./scripts/run-lighthouse.mjs seo http://localhost:3000",
+    "lighthouse:all": "node ./scripts/run-lighthouse.mjs all"
   },
   "dependencies": {
     "lucide-react": "^1.14.0",
@@ -21,6 +24,7 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.2.4",
+    "lighthouse": "^12.8.1",
     "tailwindcss": "^4",
     "typescript": "^5"
   }

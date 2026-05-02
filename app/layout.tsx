@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Cormorant_Garamond, Outfit } from "next/font/google";
 
 import { SiteJsonLd } from "@/components/json-ld";
@@ -117,6 +117,13 @@ export const metadata: Metadata = {
     "geo.position": "25.204849;55.270782",
     ICBM: "25.204849, 55.270782",
   },
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#0a0a0a",
+  colorScheme: "dark",
 };
 
 export default function RootLayout({

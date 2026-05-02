@@ -36,8 +36,8 @@ export function ProcessSection() {
       </FadeIn>
       <ol className="mt-14 grid gap-10 md:grid-cols-2 md:gap-x-14 md:gap-y-12">
         {STEPS.map((row, i) => (
-          <FadeIn key={row.step} delayMs={i * 80}>
-            <li className="flex gap-5">
+          <li key={row.step} className="min-w-0">
+            <FadeIn delayMs={i * 80} className="flex gap-5">
               <span className="font-heading text-3xl font-semibold tabular-nums text-muted">
                 {row.step}
               </span>
@@ -49,8 +49,8 @@ export function ProcessSection() {
                   {row.text}
                 </p>
               </div>
-            </li>
-          </FadeIn>
+            </FadeIn>
+          </li>
         ))}
       </ol>
     </SectionShell>

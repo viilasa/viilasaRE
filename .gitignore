@@ -13,6 +13,10 @@
 # testing
 /coverage
 
+# lighthouse (npm run lighthouse:*)
+/lighthouse-seo.html
+/lighthouse-report.html
+
 # next.js
 /.next/
 /out/

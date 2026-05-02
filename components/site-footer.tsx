@@ -22,7 +22,7 @@ export function SiteFooter() {
           <a href="#faq" className="transition-colors hover:text-gold">
             FAQ
           </a>
-          <a href="#" className="transition-colors hover:text-gold">
+          <a href="/privacy" className="transition-colors hover:text-gold">
             Privacy
           </a>
         </nav>

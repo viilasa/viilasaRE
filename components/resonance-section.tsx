@@ -20,13 +20,13 @@ export function ResonanceSection() {
         </FadeIn>
         <ul className="space-y-6">
           {PAIN.map((line, i) => (
-            <FadeIn key={line} delayMs={i * 100}>
-              <li className="border-l-2 border-gold/40 pl-6">
+            <li key={line} className="border-l-2 border-gold/40 pl-6">
+              <FadeIn delayMs={i * 100}>
                 <p className="max-w-[680px] text-[16px] font-light leading-[1.7] text-body">
                   {line}
                 </p>
-              </li>
-            </FadeIn>
+              </FadeIn>
+            </li>
           ))}
         </ul>
       </div>

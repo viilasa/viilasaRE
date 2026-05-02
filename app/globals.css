@@ -8,7 +8,8 @@
   --color-elevated-alt: #1a1a1a;
   --color-ink: #f5f5f0;
   --color-body: #a3a3a3;
-  --color-muted: #6b6b6b;
+  /* WCAG AA on canvas (#0a0a0a): ~7:1 for small caps / secondary labels */
+  --color-muted: #848484;
   --color-gold: #c9a84c;
   --color-stroke: #1f1f1f;
 }
