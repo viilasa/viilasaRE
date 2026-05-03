@@ -135,6 +135,23 @@ export default function RootLayout({
       lang="en"
       className={`${fontCormorant.variable} ${fontOutfit.variable} h-full`}
     >
+      <head>
+        {/* Google tag (gtag.js) */}
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-9BBHKRPLRW"
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-9BBHKRPLRW');
+            `,
+          }}
+        />
+      </head>
       <body className="relative isolate min-h-full">
         <SiteJsonLd />
         <div className="relative z-[1] flex min-h-full flex-col">{children}</div>
