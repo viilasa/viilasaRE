@@ -52,3 +52,24 @@ body::before {
 .animate-marquee {
   animation: marquee 48s linear infinite;
 }
+
+@keyframes chat-msg-enter {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.chat-msg-enter {
+  animation: chat-msg-enter 0.35s ease-out both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .chat-msg-enter {
+    animation: none;
+  }
+}

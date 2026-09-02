@@ -11,7 +11,7 @@ export function SiteFooter() {
         <div>
           <SiteLogo variant="footer" />
           <p className="mt-4 max-w-[360px] text-[14px] font-light leading-relaxed text-muted">
-            Dark luxury web design for real‑estate operators who can’t afford generic.
+            WhatsApp lead qualification for UAE real‑estate teams.
           </p>
           <p className="mt-4">
             <a
@@ -23,11 +23,11 @@ export function SiteFooter() {
           </p>
         </div>
         <nav className="flex flex-wrap gap-x-8 gap-y-3 text-[13px] font-medium uppercase tracking-[0.08em] text-muted">
-          <a href="#work" className="transition-colors hover:text-gold">
-            Work
+          <a href="#how" className="transition-colors hover:text-gold">
+            How it works
           </a>
-          <a href="#packages" className="transition-colors hover:text-gold">
-            Packages
+          <a href="#services" className="transition-colors hover:text-gold">
+            Services
           </a>
           <a href="#faq" className="transition-colors hover:text-gold">
             FAQ

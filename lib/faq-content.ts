@@ -2,23 +2,33 @@
 
 export const FAQ_ITEMS = [
   {
-    question: "Do you only work with Dubai teams?",
+    question: "What is a real estate lead qualifier?",
     answer:
-      "No—Dubai is the aesthetic reference, but the system works anywhere you sell high‑ticket property. Time zones are handled async + Loom.",
+      "A lead qualifier filters property inquiries before they reach your team — capturing budget, area, timeline, and intent on WhatsApp so agents only talk to buyers who can actually close.",
   },
   {
-    question: "What’s the turnaround?",
+    question: "How does WhatsApp automation work for UAE brokerages?",
     answer:
-      "Most fixed scopes land in 3–5 focused build days once assets and copy are approved—no endless revision cycles.",
+      "Viilasa connects to your WhatsApp Business number. When a buyer messages about a listing, the automation replies instantly, asks qualification questions, and routes hot leads to your agents with full context.",
   },
   {
-    question: "Do you handle copy and photography?",
+    question: "Does this replace my agents?",
     answer:
-      "You bring listings truth; I structure the narrative and art direction. For photography, we lean on your developer packs or licensed architectural imagery—no stock handshakes.",
+      "No—it filters before they get involved. Your team still closes deals; they just stop wasting time on tire‑kickers.",
   },
   {
-    question: "What do I need before kickoff?",
+    question: "What happens to unqualified leads?",
     answer:
-      "Brand basics, logo, 2–3 hero projects, and access to anything that must integrate (forms, CRM endpoint, analytics).",
+      "Cold inquiries get a polite close or a nurture path—you decide. Only buyers who match your criteria reach your phone.",
+  },
+  {
+    question: "Does it work with WhatsApp Business?",
+    answer:
+      "Yes. We connect to your existing WhatsApp Business number—no new app for your team to learn.",
+  },
+  {
+    question: "Which languages are supported?",
+    answer:
+      "English is standard. Arabic and other languages can be added based on your market—discuss on the demo call.",
   },
 ] as const;

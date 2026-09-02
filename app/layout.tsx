@@ -3,7 +3,19 @@ import { Cormorant_Garamond, Outfit } from "next/font/google";
 
 import { SiteJsonLd } from "@/components/json-ld";
 import { getContactEmail } from "@/lib/site";
-import { GEO_PRIMARY_CITY, GEO_REGION_CODE, SEO_KEYWORDS, SITE_TAGLINE, getAbsoluteUrl, getSiteUrl } from "@/lib/seo";
+import {
+  GEO_COUNTRY,
+  GEO_COUNTRY_CODE,
+  GEO_LATITUDE,
+  GEO_LONGITUDE,
+  GEO_PRIMARY_CITY,
+  GEO_REGION_CODE,
+  SEO_DESCRIPTION,
+  SEO_KEYWORDS,
+  SEO_TITLE,
+  getAbsoluteUrl,
+  getSiteUrl,
+} from "@/lib/seo";
 import "./globals.css";
 
 const fontCormorant = Cormorant_Garamond({
@@ -24,7 +36,6 @@ const siteUrl = getSiteUrl();
 const contactEmail = getContactEmail();
 
 const publisher = "Viilasa";
-const seoTitleDefault = `${publisher} · Real Estate Website Builder & Luxury Web Design`;
 const googleVerify = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION?.trim();
 const twitterRaw = process.env.NEXT_PUBLIC_TWITTER_HANDLE?.trim();
 const twitterHandle =
@@ -35,11 +46,11 @@ const twitterHandle =
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: seoTitleDefault,
+    default: SEO_TITLE,
     template: `%s · ${publisher}`,
   },
   applicationName: publisher,
-  description: SITE_TAGLINE,
+  description: SEO_DESCRIPTION,
   keywords: [...SEO_KEYWORDS],
   authors: [{ name: publisher, url: siteUrl }],
   creator: publisher,
@@ -57,27 +68,27 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/",
     languages: {
-      "en-US": "/",
       "en-AE": "/",
+      "en-US": "/",
+      "en-GB": "/",
     },
   },
   openGraph: {
     type: "website",
-    locale: "en_US",
-    alternateLocale: ["en_AE", "en_GB"],
+    locale: "en_AE",
+    alternateLocale: ["en_US", "en_GB"],
     url: "./",
     siteName: publisher,
-    title: seoTitleDefault,
-    description: SITE_TAGLINE,
-    countryName: "United Arab Emirates",
+    title: SEO_TITLE,
+    description: SEO_DESCRIPTION,
+    countryName: GEO_COUNTRY,
     emails: [contactEmail],
     images: [
       {
         url: `${getAbsoluteUrl("/opengraph-image")}`,
         width: 1200,
         height: 630,
-        alt:
-          "Viilasa brand card — luxury real estate website builder and brokerage web design",
+        alt: "Viilasa — WhatsApp lead qualifier and real estate automation for UAE teams",
       },
     ],
   },
@@ -85,15 +96,14 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     site: twitterHandle,
     creator: twitterHandle,
-    title: seoTitleDefault,
-    description: SITE_TAGLINE,
+    title: SEO_TITLE,
+    description: SEO_DESCRIPTION,
     images: [
       {
         url: `${getAbsoluteUrl("/twitter-image")}`,
         width: 1200,
         height: 630,
-        alt:
-          "Viilasa brand card — luxury real estate website builder and brokerage web design",
+        alt: "Viilasa — WhatsApp lead qualifier and real estate automation for UAE teams",
       },
     ],
   },
@@ -112,9 +122,10 @@ export const metadata: Metadata = {
   other: {
     "geo.region": GEO_REGION_CODE,
     "geo.placename": GEO_PRIMARY_CITY,
-    // Dubai CBD approx. — aligns with GEO / ICC meta readers
-    "geo.position": "25.204849;55.270782",
-    ICBM: "25.204849, 55.270782",
+    "geo.position": `${GEO_LATITUDE};${GEO_LONGITUDE}`,
+    ICBM: `${GEO_LATITUDE}, ${GEO_LONGITUDE}`,
+    "content-language": "en-AE",
+    "target-country": GEO_COUNTRY_CODE,
   },
 };
 
@@ -132,11 +143,12 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="en"
+      lang="en-AE"
       className={`${fontCormorant.variable} ${fontOutfit.variable} h-full`}
     >
       <head>
-        {/* Google tag (gtag.js) */}
+        <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+        <link rel="alternate" type="text/plain" href="/llms.txt" title="LLMs documentation" />
         <script
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-9BBHKRPLRW"

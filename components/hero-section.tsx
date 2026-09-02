@@ -10,21 +10,20 @@ export function HeroSection() {
       <div className="mx-auto max-w-[1200px] px-5 md:px-6">
         <FadeIn className="max-w-[820px]">
           <p className="font-body text-[12px] font-medium uppercase tracking-[0.2em] text-muted">
-            Dubai‑caliber sites for brokerages worldwide
+            WhatsApp lead qualifier for UAE brokerages
           </p>
           <h1 className="mt-5 font-heading text-[2.25rem] font-semibold leading-[1.12] text-ink md:mt-6 md:text-[4rem] md:leading-[1.06]">
-            Websites that feel like the properties you sell
+            Stop talking to every inquiry. Talk to the ones who can buy.
           </h1>
           <p className="mt-6 max-w-[680px] text-[16px] font-light leading-[1.7] text-body md:mt-8">
-            Viilasa designs fast, editorial sites for luxury real‑estate teams—dark,
-            restrained, conversion‑clear—so your listings and developments read as premium
-            before the first line of copy.
+            Viilasa builds WhatsApp qualifiers for Dubai and UAE real‑estate teams—budget,
+            area, timeline, intent—so only serious buyers reach your phone.
           </p>
           <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
             <ButtonCta external href={calUrl}>
-              Book a free strategy call
+              Book a demo call
             </ButtonCta>
-            <ButtonGhost href="#packages">View packages</ButtonGhost>
+            <ButtonGhost href="#how">See how it qualifies</ButtonGhost>
           </div>
         </FadeIn>
       </div>

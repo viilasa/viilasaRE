@@ -5,23 +5,23 @@ import { FadeIn } from "@/components/fade-in";
 const STEPS = [
   {
     step: "01",
-    title: "Discovery call",
-    text: "We align on positioning, audiences, listings vs developments, and your non‑negotiables.",
+    title: "Discovery",
+    text: "We map your listings, languages, and what “qualified” means for your team—budget bands, areas, timelines.",
   },
   {
     step: "02",
-    title: "Structure & art direction",
-    text: "IA, typography, and dark‑luxury system applied—mockups before we touch production.",
+    title: "Qualification script",
+    text: "Custom conversation flow built for your inventory—questions that filter tire‑kickers without losing buyers.",
   },
   {
     step: "03",
-    title: "Build & launch",
-    text: "Next.js‑fast implementation, tracked forms, analytics, WhatsApp routing, and QA on real devices.",
+    title: "Connect WhatsApp",
+    text: "Plugged into your existing WhatsApp Business number—no new app for your team to learn.",
   },
   {
     step: "04",
-    title: "Handoff",
-    text: "Loom walkthrough plus light documentation so your team owns day‑to‑day updates.",
+    title: "Handoff & refine",
+    text: "Hot leads land with full context. We tweak the script based on what converts in your market.",
   },
 ] as const;
 
@@ -31,7 +31,7 @@ export function ProcessSection() {
       <FadeIn>
         <SectionLabel>Process</SectionLabel>
         <h2 className="mt-4 max-w-[640px] font-heading text-[1.75rem] font-medium leading-[1.15] text-ink md:text-[2.5rem]">
-          A calm sequence—no circus, no rework loops.
+          Live in days—not months of CRM setup.
         </h2>
       </FadeIn>
       <ol className="mt-14 grid gap-10 md:grid-cols-2 md:gap-x-14 md:gap-y-12">

@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 
 export const alt =
-  "Viilasa — Real estate website builder and luxury brokerage web design";
+  "Viilasa — WhatsApp lead qualifier and real estate automation for UAE teams";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -40,8 +40,8 @@ export default function OpenGraphImage() {
             lineHeight: 1.4,
           }}
         >
-          Real estate website builder & luxury web design for brokerages and
-          developers — fast builds, WhatsApp‑ready conversion.
+          WhatsApp lead qualifier & real estate automation for Dubai & UAE
+          brokerages — filter inquiries before they reach your phone.
         </div>
         <div
           style={{
@@ -53,7 +53,7 @@ export default function OpenGraphImage() {
             letterSpacing: "0.22em",
           }}
         >
-          Dubai aesthetic · Worldwide delivery
+          Lead qualification · UAE · Automation
         </div>
       </div>
     ),

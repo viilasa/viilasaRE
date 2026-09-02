@@ -5,11 +5,10 @@ import { useEffect, useState } from "react";
 import { SiteLogo } from "@/components/site-logo";
 
 const NAV = [
-  { label: "Work", href: "#work" },
-  { label: "Packages", href: "#packages" },
+  { label: "How it works", href: "#how" },
+  { label: "Services", href: "#services" },
   { label: "Process", href: "#process" },
   { label: "FAQ", href: "#faq" },
-  { label: "About", href: "#about" },
 ] as const;
 
 export function SiteHeader() {

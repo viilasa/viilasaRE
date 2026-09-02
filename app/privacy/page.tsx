@@ -10,8 +10,9 @@ import { getContactEmail } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Privacy policy",
   description:
-    "How Viilasa handles visitor information when you browse our agency site.",
+    "Privacy policy for Viilasa — WhatsApp lead qualifier and real estate automation services for UAE teams.",
   alternates: { canonical: "/privacy" },
+  robots: { index: true, follow: true },
 };
 
 export default function PrivacyPage() {

@@ -23,17 +23,17 @@ export function AboutSection() {
         <FadeIn delayMs={80}>
           <SectionLabel>About Viilasa</SectionLabel>
           <h2 className="mt-4 font-heading text-[1.75rem] font-medium leading-[1.15] text-ink md:text-[2.5rem]">
-            Real‑estate websites, treated like product—not templates.
+            Lead qualification built for UAE real‑estate.
           </h2>
           <div className="mt-6 max-w-[680px] space-y-5 text-[16px] font-light leading-[1.7] text-body">
             <p>
               Viilasa exists for operators who sell million‑dirham decisions on a phone screen.
-              My job is simple: translate that standard of care into a site that loads fast,
-              feels expensive, and points every section to one action—talk to you.
+              The qualifier filters WhatsApp inquiries so you only talk to buyers who can
+              actually close.
             </p>
             <p>
-              If you’d rather see a face and hear cadence first, drop a Loom embed here. It’s
-              not decoration—it’s trust.
+              Every setup is scoped to your listings, languages, and handoff flow — built for
+              Dubai brokerages and agents across the UAE.
             </p>
           </div>
         </FadeIn>

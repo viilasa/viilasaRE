@@ -36,5 +36,5 @@ export function getWhatsAppUrl() {
   const phone =
     process.env.NEXT_PUBLIC_WHATSAPP_PHONE?.replace(/\D/g, "") ||
     DEFAULT_WHATSAPP_E164_DIGITS;
-  return `https://wa.me/${phone}?text=${encodeURIComponent("Hi Viilasa — I'd like to book a strategy call.")}`;
+  return `https://wa.me/${phone}?text=${encodeURIComponent("Hi Viilasa — I'd like to learn about the WhatsApp lead qualifier for my team.")}`;
 }

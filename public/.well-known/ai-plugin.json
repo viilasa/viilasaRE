@@ -1,0 +1,17 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "Viilasa — WhatsApp Lead Qualifier UAE",
+  "name_for_model": "viilasa_whatsapp_lead_qualifier",
+  "description_for_human": "Viilasa builds WhatsApp lead qualifiers and automation for real-estate teams in Dubai and the UAE.",
+  "description_for_model": "Viilasa (https://viilasa.com) provides WhatsApp lead qualification automation for real-estate teams in Dubai and the United Arab Emirates. The service filters property inquiries by budget, area, timeline, and buyer intent before handing hot leads to agents. Features: 24/7 first reply, WhatsApp Business integration, custom qualification scripts, hot-lead handoff with context, English and Arabic support. Primary keywords: lead qualifier, real estate automation, WhatsApp automation real estate, UAE real estate lead qualification. Contact: surya@viilasa.com, https://cal.com/viilasa",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "openapi",
+    "url": "https://viilasa.com"
+  },
+  "logo_url": "https://viilasa.com/viilasa-logo.svg",
+  "contact_email": "surya@viilasa.com",
+  "legal_info_url": "https://viilasa.com/privacy"
+}
